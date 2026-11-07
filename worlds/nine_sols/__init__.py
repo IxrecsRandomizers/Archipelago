@@ -1,6 +1,7 @@
-from typing import Any, ClassVar, TextIO
+from typing import ClassVar, TextIO
 
 from BaseClasses import Tutorial
+from entrance_rando import randomize_entrances
 from worlds.AutoWorld import WebWorld, World
 from Options import OptionError, OptionGroup
 from .items import NineSolsItem, all_non_event_items_table, item_name_groups, create_item, create_items
@@ -150,6 +151,9 @@ class NineSolsWorld(World):
 
     def create_items(self) -> None:
         create_items(self)
+
+    def connect_entrances(self) -> None:
+        placement_state = randomize_entrances(self, True, { 0: [0] })
 
     def get_filler_item_name(self) -> str:
         # Used in corner cases (e.g. plando, item_links, start_inventory_from_pool)
