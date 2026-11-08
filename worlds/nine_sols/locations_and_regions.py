@@ -278,7 +278,7 @@ def create_regions(world: "NineSolsWorld") -> None:
             if "portal_name" in connection:  # this connection is an ER-able "portal", so do GER setup
                 if "one_way_target_name" in connection:
                     e.randomization_type = EntranceType.ONE_WAY
-                    disconnect_entrance_for_randomization(e, connection["one_way_target_name"])
+                    disconnect_entrance_for_randomization(e, None, connection["one_way_target_name"])
                 else:
                     e.randomization_type = EntranceType.TWO_WAY
                     disconnect_entrance_for_randomization(e)  # two-way entrances don't use the target name arg
