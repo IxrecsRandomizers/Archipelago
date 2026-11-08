@@ -49,6 +49,8 @@ connections_data_top_level_schema = Schema([
         Optional("requires"): [object],
         Optional("medium_requires"): [object],
         Optional("ls_requires"): [object],
+        Optional("portal_name"): str,
+        Optional("one_way_target_name"): str,
     },
 ])
 
