@@ -84,6 +84,7 @@ class NineSolsWorld(World):
     using_ut: bool
     jade_costs: dict[str, int] | str
     node_items: list[str]
+    er_pairings: list[tuple[str, str]]
 
     def __init__(self, multiworld, player):
         super(NineSolsWorld, self).__init__(multiworld, player)
@@ -153,7 +154,13 @@ class NineSolsWorld(World):
         create_items(self)
 
     def connect_entrances(self) -> None:
-        placement_state = randomize_entrances(self, True, { 0: [0] })
+        if self.options.randomize_entrances:
+            placement_state = randomize_entrances(
+                self,
+                self.options.coupled_entrances.value == 1,
+                { 0: [0] }
+            )
+            self.er_pairings = placement_state.pairings
 
     def get_filler_item_name(self) -> str:
         # Used in corner cases (e.g. plando, item_links, start_inventory_from_pool)
@@ -199,6 +206,8 @@ class NineSolsWorld(World):
         slot_data["node_items"] = self.node_items
         # APWorld versions are not (yet?) exposed by AP servers, so the client/mod needs us to put it in slot_data
         slot_data["apworld_version"] = self.world_version.as_simple_string()
+        if self.options.randomize_entrances:
+            slot_data["er_pairings"] = self.er_pairings
         return slot_data
 
     def write_spoiler(self, spoiler_handle: TextIO) -> None:

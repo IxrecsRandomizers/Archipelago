@@ -1,5 +1,4 @@
 from dataclasses import dataclass
-from schema import And, Optional, Schema
 
 from Options import Choice, DefaultOnToggle, OptionCounter, PerGameCommonOptions, Range, StartInventoryPool, Toggle
 
@@ -363,6 +362,24 @@ class RandomizeSkillTree(Toggle):
     display_name = "Randomize Skill Tree"
 
 
+class RandomizeEntrances(Toggle):
+    """
+    TODO: description
+    """
+    display_name = "Randomize Entrances"
+
+
+class CoupledEntrances(DefaultOnToggle):
+    """
+    In "coupled" ER, every A->B connection has a B->A connection as well. In other words, if you go into
+    door A and come out of door B, going back into door B will take you back to door A.
+    Highly recommended for your first time doing ER. Uncoupled ER is much less intuitive.
+
+    Has no effect if randomize_entrances is False.
+    """
+    display_name = "Coupled Entrances"
+
+
 # actual Option Groups are specified in the WebWorld in __init__.py for some reason
 @dataclass
 class NineSolsGameOptions(PerGameCommonOptions):
@@ -404,4 +421,5 @@ class NineSolsGameOptions(PerGameCommonOptions):
     # Additional Randomizations
     randomize_shops: RandomizeShops
     randomize_skill_tree: RandomizeSkillTree
-    # entrance_randomization
+    randomize_entrances: RandomizeEntrances
+    coupled_entrances: CoupledEntrances
