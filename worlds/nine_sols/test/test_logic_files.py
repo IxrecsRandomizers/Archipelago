@@ -81,15 +81,15 @@ class TestLogicFiles(unittest.TestCase):
         with open(connections_path, 'r') as connections_file:
             actual_connections_data = connections_file.read()
 
-        self.assertEqual(
-            expected_items_data,
-            actual_items_data,
+        # https://github.com/python/cpython/issues/63416 assertEqual() hangs forever on unequal objects.
+        # This issue claims it's a 3.12 issue fixed in py3.14, although I didn't observe it until 3.13.
+        # Regardless, AP doesn't support .14 yet, so we'll just use the "worse" non-hanging assertion for now.
+        self.assertTrue(
+            expected_items_data == actual_items_data,
             "items.jsonc does not match items.py. Please regenerate these files.")
-        self.assertEqual(
-            expected_locations_data,
-            actual_locations_data,
+        self.assertTrue(
+            expected_locations_data == actual_locations_data,
             "locations.jsonc does not match locations.py. Please regenerate these files.")
-        self.assertEqual(
-            expected_connections_data,
-            actual_connections_data,
+        self.assertTrue(
+            expected_connections_data == actual_connections_data,
             "connections.jsonc does not match connections.py. Please regenerate these files.")
