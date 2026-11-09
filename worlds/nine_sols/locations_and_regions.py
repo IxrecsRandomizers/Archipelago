@@ -4,6 +4,7 @@ from typing import Any, NamedTuple
 
 from BaseClasses import CollectionState, CollectionRule, Location, Region
 from rule_builder.rules import Has, HasGroup, CanReachLocation, CanReachRegion, True_, False_, Rule
+from .items import item_data_table
 from .options import FirstRootNode, LogicDifficulty, NineSolsGameOptions
 from .should_generate import should_generate
 from .shared_static_logic.locations import locations_data
@@ -352,6 +353,10 @@ def eval_rb_criterion(criterion: Any, options: NineSolsGameOptions) -> Rule:
 
             if key == "item_group":
                 return HasGroup(value, count)
+
+            # TODO: can we tweak the UT impl to not need these eval_* helpers?
+            if value not in item_data_table and value != "UT Glitch Logic":
+                raise RuntimeError(value + " is not an item name")
             return Has(value, count)
         elif key == "count":
             raise ValueError("Apparently dict iteration can hit 'count' first?: " + json.dumps(criterion))

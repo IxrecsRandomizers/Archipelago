@@ -872,7 +872,7 @@ locations_data = [
                 { "anyOf": [
                     [
                         { "item": "Trick - Bow Hover"}, # to reach the climbable wall after the first piston
-                        { "item": "Trick - Long Jump With Swift Runner" } # to pass the 4 pistons as well as reach the last climbable wall
+                        { "item": "Trick - Long Jump with Swift Runner" } # to pass the 4 pistons as well as reach the last climbable wall
                     ],
                     { "item": "Charged Strike" } # CS Dash can replace what Bow Hover and SR do here
                 ] },
