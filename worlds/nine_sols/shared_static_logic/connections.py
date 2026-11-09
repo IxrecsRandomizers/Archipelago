@@ -155,7 +155,11 @@ connections_data = [
         ] } ],
         "medium_requires": [ { "anyOf": [
             { "item": "Trick - Bow Hover" },
-            { "anyOf": [ { "item": "Air Dash" }, { "item": "Cloud Leap" } ] } # and T-dash
+            [
+                { "item": "Cloud Leap" },
+                { "anyOf": [ { "item": "Air Dash" }, { "item": "Trick - Long Jump with Swift Runner" }, { "item": "Charged Strike"} ] }
+            ],
+            [ { "item": "Air Dash" }, { "item": "Charged Strike" } ]
         ] } ]
     }, # no access to LS from this side
 
