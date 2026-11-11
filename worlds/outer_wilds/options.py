@@ -105,7 +105,10 @@ class UpgradeCounts(OptionCounter):
     This option and upgrade_maxima let you directly change the number of items and the maximum %s.
     The minimum %s cannot be changed from 50% because any less would make locations unreachable and affect logic.
     The effect of each individual upgrade item is indirectly determined by these options. For example, if you choose
-    5 boost upgrades and a maximum boost of 550%, then each boost upgrade item will add 100% to your boost."""
+    5 boost upgrades and a maximum boost of 550%, then each boost upgrade item will add 100% to your boost.
+
+    If you choose 0 of an upgrade, the vanilla stat will no longer be changed, i.e. you'll start at 100% and stay there.
+    """
     schema = Schema({
         Optional("Oxygen Capacity Upgrade"): lambda n: n >= 0,
         Optional("Fuel Capacity Upgrade"): lambda n: n >= 0,
