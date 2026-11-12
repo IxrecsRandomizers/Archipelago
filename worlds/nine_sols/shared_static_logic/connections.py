@@ -2088,13 +2088,14 @@ connections_data = [
         "ls_requires": [
             { "item": "Ledge Grab" },  # wall slide up and over the obstacle
             { "region": "GoS (East) - Outside Yin Jifu's Tomb" }, # the ledge used to obtain LS is in this region
-            # t-dash setup alone is not fine here, you must clear a gap while retaining qi for that setup
-            { "anyOf": [ { "item": "Charged Strike" },
-                         { "item": "Trick - Long Jump with Swift Runner" },
-                         { "item": "Air Dash"},
-                         { "item": "Trick - Bow Hover"},
-                         { "item": "Grapple"} # or grab qi from the enemies below
-            ]} 
+            { "anyOf": [ # there's three different ways to get LS from that ledge:
+                { "item": "Air Dash" }, # 1) simply do AD setup
+                { "item": "Grapple" }, # 2) from Stone Carvings, drop down to the enemies, then grapple back up
+                # 3) get qi from root node enemies, then cross the small gap to the portal to Outside Yin Jifu's Tomb
+                { "item": "Charged Strike" },
+                { "item": "Trick - Long Jump with Swift Runner" },
+                { "item": "Trick - Bow Hover"},
+            ] }
         ]
     },
     { "from": "GoS (East) - Upper Exit", "to": "GoS (East) - Stone Carvings", "requires": [
