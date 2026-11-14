@@ -1,6 +1,6 @@
 from typing import ClassVar, TextIO
 
-from BaseClasses import Tutorial
+from BaseClasses import Tutorial, EntranceType, Entrance
 from entrance_rando import randomize_entrances
 from worlds.AutoWorld import WebWorld, World
 from Options import OptionError, OptionGroup
@@ -85,7 +85,7 @@ class NineSolsWorld(World):
     using_ut: bool
     jade_costs: dict[str, int] | str
     node_items: list[str]
-    er_pairings: list[tuple[str, str]]
+    er_pairings: list[tuple[str, str]] | None
 
     def __init__(self, multiworld, player):
         super(NineSolsWorld, self).__init__(multiworld, player)
@@ -94,6 +94,7 @@ class NineSolsWorld(World):
         self.jade_costs = 'vanilla'
         self.using_ut = False
         self.node_items = []
+        self.er_pairings = None
 
     def generate_early(self) -> None:
         if self.options.jade_cost_max < self.options.jade_cost_min:
@@ -108,6 +109,8 @@ class NineSolsWorld(World):
 
                     self.node_items = slot_data.get('node_items', [])  # in normal gen this only affects start inventory, but UT needs this for /next_progression
                     self.options.first_root_node.value = FirstRootNode.from_text(slot_data['first_root_node_name']).value
+                    if 'er_pairings' in slot_data:
+                        self.er_pairings = slot_data['er_pairings']
 
                     self.options.seals_for_eigong.value = slot_data['seals_for_eigong']
                     self.options.seals_for_prison.value = slot_data['seals_for_prison']
@@ -155,7 +158,33 @@ class NineSolsWorld(World):
         create_items(self)
 
     def connect_entrances(self) -> None:
-        if self.options.randomize_entrances:
+        vanilla_one_ways = { # portal_name to one_way_target_name
+            "CH_BOTTOM_VENT_SHAFT": "CTH_UPPER_LEFT_VENT_SHAFT",
+            "GREENHOUSE_BOTTOM_PORTAL": "WOS_TOP_PORTAL",
+            "FGH_BOTTOM_RIGHT_HOLE_PORTAL": "FU_UPPER_RIGHT_HOLE_PORTAL",
+            "GOSY_LOWER_ELEVATOR_SHAFT": "GREENHOUSE_TOP_ELEVATOR_SHAFT",
+        }
+
+        portal_to_entrance: dict[str, Entrance] = {}
+
+        if self.er_pairings: # UT regen: we need to "plando" the pairings from slot_data
+            for region in self.get_regions():
+                for entrance in region.entrances:
+                    # unfortunately entrances default to being ONE_WAY, so randomization_type is useless here,
+                    # and we just have to assume vanilla_one_ways contains all and only the real one-ways
+                    if entrance.name not in vanilla_one_ways:
+                        portal_to_entrance[entrance.name] = entrance
+                    else:
+                        one_way_target_name = vanilla_one_ways[entrance.name]
+                        portal_to_entrance[entrance.name] = entrance
+                        portal_to_entrance[one_way_target_name] = entrance
+
+            for pairing in self.er_pairings:
+                assert pairing[0] in portal_to_entrance, f"entrance {pairing[0]} in slot data not in world"
+                assert pairing[1] in portal_to_entrance, f"entrance {pairing[1]} in slot data not in world"
+
+                portal_to_entrance[pairing[0]].connected_region = portal_to_entrance[pairing[1]].parent_region
+        elif self.options.randomize_entrances: # regular gen: we need to actually randomize the entrances
             placement_state = randomize_entrances(
                 self,
                 self.options.coupled_entrances.value == 1,
