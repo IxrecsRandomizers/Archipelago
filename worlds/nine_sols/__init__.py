@@ -186,7 +186,12 @@ class NineSolsWorld(World):
             placement_state = randomize_entrances(
                 self,
                 self.options.coupled_entrances.value == 1,
-                { 0: [0] }
+                # we use grouping to solve the "what if you need >2 bow hovers to reach the next root node" problem
+                {
+                    0: [0,1,2], # can get here with 0 bow hovers, so it's okay if the other side needs 2
+                    1: [0,1], # if you need 1 to get here, you only have 1 left for the other side
+                    2: [0], # if you need 2 to get here, you have none left
+                }
             )
             self.er_pairings = placement_state.pairings
 
