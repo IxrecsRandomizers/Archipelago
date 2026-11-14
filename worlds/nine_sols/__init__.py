@@ -104,7 +104,7 @@ class NineSolsWorld(World):
                     slot_data = self.multiworld.re_gen_passthrough["Nine Sols"]
 
                     self.node_items = slot_data.get('node_items', [])  # in normal gen this only affects start inventory, but UT needs this for /next_progression
-                    self.options.first_root_node = FirstRootNode.from_text(slot_data['first_root_node_name'])
+                    self.options.first_root_node.value = FirstRootNode.from_text(slot_data['first_root_node_name']).value
 
                     self.options.seals_for_eigong.value = slot_data['seals_for_eigong']
                     self.options.seals_for_prison.value = slot_data['seals_for_prison']
