@@ -10,6 +10,7 @@ from .ut_map_page.map_page_index import map_page_index
 from .jade_costs import generate_random_jade_costs
 from .node_items import select_node_item_names
 from .options import *
+from .shared_static_logic.connections import connections_data
 
 
 class NineSolsWebWorld(WebWorld):
@@ -158,20 +159,17 @@ class NineSolsWorld(World):
         create_items(self)
 
     def connect_entrances(self) -> None:
-        vanilla_one_ways = { # portal_name to one_way_target_name
-            "CH_BOTTOM_VENT_SHAFT": "CTH_UPPER_LEFT_VENT_SHAFT",
-            "GREENHOUSE_BOTTOM_PORTAL": "WOS_TOP_PORTAL",
-            "FGH_BOTTOM_RIGHT_HOLE_PORTAL": "FU_UPPER_RIGHT_HOLE_PORTAL",
-            "GOSY_LOWER_ELEVATOR_SHAFT": "GREENHOUSE_TOP_ELEVATOR_SHAFT",
-        }
-
-        portal_to_entrance: dict[str, Entrance] = {}
-
         if self.er_pairings: # UT regen: we need to "plando" the pairings from slot_data
+            vanilla_one_ways: dict[str, str] = {} # portal_name to one_way_target_name
+            for c in connections_data:
+                if "one_way_target_name" in c:
+                    vanilla_one_ways[c["portal_name"]] = c["one_way_target_name"]
+
+            portal_to_entrance: dict[str, Entrance] = {}
             for region in self.get_regions():
                 for entrance in region.entrances:
-                    # unfortunately entrances default to being ONE_WAY, so randomization_type is useless here,
-                    # and we just have to assume vanilla_one_ways contains all and only the real one-ways
+                    # Unfortunately entrances default to being ONE_WAY, so randomization_type is useless here.
+                    # Instead, we just have to assume that vanilla_one_ways was built correctly.
                     if entrance.name not in vanilla_one_ways:
                         portal_to_entrance[entrance.name] = entrance
                     else:
