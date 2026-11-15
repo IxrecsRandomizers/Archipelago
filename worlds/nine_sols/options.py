@@ -364,7 +364,14 @@ class RandomizeSkillTree(Toggle):
 
 class RandomizeEntrances(Toggle):
     """
-    TODO: description
+    Entrance randomization makes many of the doors, transporters, crates, elevators, etc. Yi uses to
+    travel around New Kunlun go somewhere else instead. For example, walking out the right exit of
+    Cortex Center might spawn you inside the crates headed to Inner Warehouse.
+
+    This option currently randomizes 51 two-way connections and 4 one-way connections. Many other connections
+    are intentionally left unrandomized, such as the Central Hall doors to FSP and Control Hub/Eigong,
+    the Jiequan 1 fight into Prison, Lady E's soulscape entrance, the connections between each part of
+    Peach Blossom Village, and the doors into various "puzzle rooms" and "enemy gauntlet rooms".
     """
     display_name = "Randomize Entrances"
 
