@@ -165,23 +165,28 @@ class NineSolsWorld(World):
                 if "one_way_target_name" in c:
                     vanilla_one_ways[c["portal_name"]] = c["one_way_target_name"]
 
-            portal_to_entrance: dict[str, Entrance] = {}
+            two_way_portal_to_entrance: dict[str, Entrance] = {}
+            one_way_portal_to_entrance: dict[str, Entrance] = {}
             for region in self.get_regions():
                 for entrance in region.entrances:
                     # Unfortunately entrances default to being ONE_WAY, so randomization_type is useless here.
                     # Instead, we just have to assume that vanilla_one_ways was built correctly.
                     if entrance.name not in vanilla_one_ways:
-                        portal_to_entrance[entrance.name] = entrance
+                        two_way_portal_to_entrance[entrance.name] = entrance
                     else:
                         one_way_target_name = vanilla_one_ways[entrance.name]
-                        portal_to_entrance[entrance.name] = entrance
-                        portal_to_entrance[one_way_target_name] = entrance
+                        one_way_portal_to_entrance[entrance.name] = entrance
+                        one_way_portal_to_entrance[one_way_target_name] = entrance
 
             for pairing in self.er_pairings:
-                assert pairing[0] in portal_to_entrance, f"entrance {pairing[0]} in slot data not in world"
-                assert pairing[1] in portal_to_entrance, f"entrance {pairing[1]} in slot data not in world"
+                assert (pairing[0] in two_way_portal_to_entrance or pairing[0] in one_way_portal_to_entrance), f"entrance {pairing[0]} in slot data not in world"
+                assert (pairing[1] in two_way_portal_to_entrance or pairing[1] in one_way_portal_to_entrance), f"entrance {pairing[1]} in slot data not in world"
+                if pairing[0] in two_way_portal_to_entrance:
+                    assert pairing[1] in two_way_portal_to_entrance, f"two-way portal {pairing[0]} mapped to one-way portal {pairing[1]}"
+                    two_way_portal_to_entrance[pairing[0]].connected_region = two_way_portal_to_entrance[pairing[1]].parent_region
+                else:
+                    one_way_portal_to_entrance[pairing[0]].connected_region = one_way_portal_to_entrance[pairing[1]].connected_region
 
-                portal_to_entrance[pairing[0]].connected_region = portal_to_entrance[pairing[1]].parent_region
         elif self.options.randomize_entrances: # regular gen: we need to actually randomize the entrances
             placement_state = randomize_entrances(
                 self,
