@@ -1897,6 +1897,7 @@ connections_data = [
         # after which you only need to do the last two TCK target jumps
         { "item": "Cloud Leap" }, { "item": "Tai-Chi Kick" }
     ] } ] },
+    { "from": "Factory (PA) - Upper Elevator", "to": "Factory (PA) - Right Fire Zone & Wuqiang Arena", "requires": [] }, # fall (matters in ER)
     { "from": "Factory (PA) - Right Fire Zone & Wuqiang Arena", "to": "Factory (PA) - Lower Right Exit", "requires": [] }, # fall
     { "from": "Factory (PA) - Lower Right Exit", "to": "Factory (PA) - Right Fire Zone & Wuqiang Arena", "requires": [
         { "item": "Ledge Grab" }
