@@ -1,6 +1,6 @@
 from typing import ClassVar, TextIO
 
-from BaseClasses import Tutorial, EntranceType, Entrance
+from BaseClasses import Tutorial, EntranceType, Entrance, Region
 from entrance_rando import randomize_entrances
 from worlds.AutoWorld import WebWorld, World
 from Options import OptionError, OptionGroup
@@ -166,7 +166,8 @@ class NineSolsWorld(World):
                     vanilla_one_ways[c["portal_name"]] = c["one_way_target_name"]
 
             two_way_portal_to_entrance: dict[str, Entrance] = {}
-            one_way_portal_to_entrance: dict[str, Entrance] = {}
+            departure_only_portal_to_ap_entrance: dict[str, Entrance] = {}
+            arrival_only_portal_to_ap_region: dict[str, Region | None] = {}
             for region in self.get_regions():
                 for entrance in region.entrances:
                     # Unfortunately entrances default to being ONE_WAY, so randomization_type is useless here.
@@ -175,17 +176,17 @@ class NineSolsWorld(World):
                         two_way_portal_to_entrance[entrance.name] = entrance
                     else:
                         one_way_target_name = vanilla_one_ways[entrance.name]
-                        one_way_portal_to_entrance[entrance.name] = entrance
-                        one_way_portal_to_entrance[one_way_target_name] = entrance
+                        departure_only_portal_to_ap_entrance[entrance.name] = entrance
+                        arrival_only_portal_to_ap_region[one_way_target_name] = entrance.connected_region
 
             for pairing in self.er_pairings:
-                assert (pairing[0] in two_way_portal_to_entrance or pairing[0] in one_way_portal_to_entrance), f"entrance {pairing[0]} in slot data not in world"
-                assert (pairing[1] in two_way_portal_to_entrance or pairing[1] in one_way_portal_to_entrance), f"entrance {pairing[1]} in slot data not in world"
+                assert (pairing[0] in two_way_portal_to_entrance or pairing[0] in departure_only_portal_to_ap_entrance), f"entrance {pairing[0]} in slot data not in world"
                 if pairing[0] in two_way_portal_to_entrance:
                     assert pairing[1] in two_way_portal_to_entrance, f"two-way portal {pairing[0]} mapped to one-way portal {pairing[1]}"
                     two_way_portal_to_entrance[pairing[0]].connected_region = two_way_portal_to_entrance[pairing[1]].parent_region
                 else:
-                    one_way_portal_to_entrance[pairing[0]].connected_region = one_way_portal_to_entrance[pairing[1]].connected_region
+                    assert pairing[1] in arrival_only_portal_to_ap_region, f"entrance {pairing[1]} not found in arrival_only_portal_to_ap_region"
+                    departure_only_portal_to_ap_entrance[pairing[0]].connected_region = arrival_only_portal_to_ap_region[pairing[1]]
 
         elif self.options.randomize_entrances: # regular gen: we need to actually randomize the entrances
             placement_state = randomize_entrances(
