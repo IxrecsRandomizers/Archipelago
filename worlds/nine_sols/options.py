@@ -309,12 +309,10 @@ class RandomizeShops(Toggle):
     Same for the other two arrow types.
 
     Logic details:
-    - Kuafu's Jin-only shop locations are available as soon as you unlock him and his "extra inventory".
-    The 6 Dark Steel locations and the 8 Herb Catalyst locations still each require 1 DS or HC to purchase.
-    The Nth DS/HC location becomes "in logic" when you receive the Nth DS/HC item.
-    - Chiyou and 3D Printer shop locations are grouped into low, medium and high cost.
+    - All shop locations are grouped into low, medium and high cost.
     They'll become "in logic" as you gain access to more of the game world.
-    Depending on your first_root_node, low cost locations may be in logic immediately.
+    - Kuafu's 6 Dark Steel locations and 8 Herb Catalyst locations also logically require 1 DS or HC each to purchase.
+    The Nth DS/HC location becomes "in logic" when you receive the Nth DS/HC item.
 
     Jin can get pretty tight if enough important items land in shops, so consider additional mods
     such as Jin Multiplier and No Death Penalty.
@@ -346,7 +344,6 @@ class RandomizeSkillTree(Toggle):
     Logic details:
     - Skill tree locations are grouped into low, medium and high cost.
     They'll become "in logic" as you gain access to more of the game world.
-    Depending on your first_root_node, low cost locations may be in logic immediately.
     - For now, a skill tree node is defined as low/medium/high cost if it needs
     at most 3/9/10 skill points to unlock itself and all of its prerequisite nodes.
     For example, Enhanced Water Flow takes 15 "total skill points" so it's "high cost",
