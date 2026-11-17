@@ -147,7 +147,7 @@ def create_regions(world: "OuterWildsWorld") -> None:
             world.set_rule(mw.get_location(ld["name"], p), eval_rule(ld["requires"], split_translator))
 
     # add dynamic logic, i.e. connections based on player options
-    menu = mw.get_region("Menu", p)
+    menu = world.get_region("Menu")
     if options.spawn == Spawn.option_vanilla:
         menu.add_exits(["Timber Hearth Village"])
     elif options.spawn == Spawn.option_hourglass_twins:
@@ -163,18 +163,23 @@ def create_regions(world: "OuterWildsWorld") -> None:
     elif options.spawn == Spawn.option_deep_bramble:
         menu.add_exits(["Deep Bramble"])
         world.set_rule(
-            mw.get_entrance("Menu -> Space", p),
+            world.get_entrance("Menu -> Space"),
             HasAll("Launch Codes", "Interstellar Warp Drive")
         )
         world.create_entrance(
-            mw.get_region("Deep Bramble", p),
-            mw.get_region("Deep Bramble with Ship", p),
+            world.get_region("Deep Bramble"),
+            world.get_region("Timber Hearth Village"),
+            Has("Interstellar Warp Drive")
+        )
+        world.create_entrance(
+            world.get_region("Deep Bramble"),
+            world.get_region("Deep Bramble with Ship"),
             Has("Launch Codes")
         )
         if options.enable_ac_mod and options.logsanity:
             world.set_rule(
-                mw.get_location("AC Ship Log: Flashback Vision", p),
-                HasAll("Launch Codes", "Interstellar Warp Drive")
+                world.get_location("AC Ship Log: Flashback Vision"),
+                Has("Interstellar Warp Drive")
             )
 
     if options.goal == Goal.option_song_of_the_universe:
