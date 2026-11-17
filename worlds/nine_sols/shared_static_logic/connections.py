@@ -2060,8 +2060,9 @@ connections_data = [
         { "item": "Cloud Leap" }
     ] }, # tricks help with parts of this, but you'll still need to CL over at least one spike ball no matter what
     { "from": "GoS (East) - Root Node", "to": "GoS (East) - Spike Ball Hall Platforms", "requires": [] }, # fall
-    { "from": "GoS (East) - Root Node", "to": "GoS (East) - Middle Exit", "requires": [] }, # fall
+    { "from": "GoS (East) - Root Node", "to": "GoS (East) - Middle Exit", "requires": [] }, # fall and trigger spike ball
     { "from": "GoS (East) - Middle Exit", "to": "GoS (East) - Root Node", "requires": [
+        { "region": "GoS (East) - Root Node" }, # a pillar blocks the middle exit until you trigger the spike ball
         { "item": "Cloud Leap" } # to jump up to the rope, and then from wooden platforms to node ledge
     ] },
     {
@@ -2123,7 +2124,9 @@ connections_data = [
     ] },
 
     { "from": "GoS (East) - Middle Exit", "to": "GoS (West) - Lower Right Exits", "requires": [], "portal_name": "GOSE_MIDDLE_PORTAL" },
-    { "from": "GoS (West) - Lower Right Exits", "to": "GoS (East) - Middle Exit", "requires": [], "portal_name": "GOSW_MIDDLE_RIGHT_PORTAL" },
+    { "from": "GoS (West) - Lower Right Exits", "to": "GoS (East) - Middle Exit", "requires": [
+        { "region": "GoS (East) - Root Node" }, # a pillar blocks GOSW_MIDDLE_RIGHT_PORTAL until you trigger the GoSE spike ball
+    ], "portal_name": "GOSW_MIDDLE_RIGHT_PORTAL" },
 
     { "from": "GoS (East) - Upper Exit", "to": "GoS (West) - Upper Right Exit", "requires": [],
       "portal_name": "GOSE_UPPER_PORTAL", "bow_hovers": 1 },
