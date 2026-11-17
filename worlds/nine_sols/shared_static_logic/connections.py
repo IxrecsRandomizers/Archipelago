@@ -2912,10 +2912,6 @@ connections_data = [
         { "item": "Grotto of Scriptures (East) Root Node" }
     ] },
 
-    # Shop logic
-    { "from": "FSP - Root Node", "to": "FSP - Kuafu's Shop", "requires": [ { "item": "Event - Kuafu in FSP" } ] },
-    { "from": "FSP - Root Node", "to": "FSP - Kuafu's Extra Inventory", "requires": [ { "item": "Event - Kuafu Extra Shop Inventory" } ] },
-
     # we don't have a good way of expressing "any 2 of these 3 regions"
     {
         "from": "FSP - Root Node", "to": "Left-Side Map Access",
@@ -2942,6 +2938,7 @@ connections_data = [
         ]}]
     },
 
+    # Shop logic
     {
         "from": "FSP - Root Node", "to": "FSP Shops & Skill Tree (Low Cost)",
         "requires": [ { "anyOf": [
@@ -2968,6 +2965,19 @@ connections_data = [
         ]
     },
 
+    {"from": "FSP - Root Node", "to": "FSP - Kuafu's Shop (No Cost)", "requires": [{"item": "Event - Kuafu in FSP"}]},
+    {
+        "from": "FSP Shops & Skill Tree (Low Cost)", "to": "FSP - Kuafu's Shop (Low Cost)",
+        "requires": [ { "item": "Event - Kuafu in FSP" } ]
+    },
+    {
+        "from": "FSP Shops & Skill Tree (Medium Cost)", "to": "FSP - Kuafu's Shop (Medium Cost)",
+        "requires": [ { "item": "Event - Kuafu in FSP" } ]
+    },
+    {
+        "from": "FSP Shops & Skill Tree (High Cost)", "to": "FSP - Kuafu's Shop (High Cost)",
+        "requires": [ { "item": "Event - Kuafu in FSP" } ]
+    },
     {
         "from": "FSP Shops & Skill Tree (Low Cost)", "to": "FSP - Chiyou's Shop",
         "requires": [ { "item": "Event - Chiyou in FSP" } ]
@@ -2979,6 +2989,18 @@ connections_data = [
     {
         "from": "FSP Shops & Skill Tree (High Cost)", "to": "FSP - Chiyou's Shop (High Cost)",
         "requires": [ { "item": "Event - Chiyou in FSP" } ]
+    },
+    {
+        "from": "FSP Shops & Skill Tree (Low Cost)", "to": "FSP - Kuafu's Extra Inventory (Low Cost)",
+        "requires": [{"item": "Event - Kuafu Extra Shop Inventory"}]
+    },
+    {
+        "from": "FSP Shops & Skill Tree (Medium Cost)", "to": "FSP - Kuafu's Extra Inventory (Medium Cost)",
+        "requires": [{"item": "Event - Kuafu Extra Shop Inventory"}]
+    },
+    {
+        "from": "FSP Shops & Skill Tree (High Cost)", "to": "FSP - Kuafu's Extra Inventory (High Cost)",
+        "requires": [{"item": "Event - Kuafu Extra Shop Inventory"}]
     },
 
     # Skill tree logic
