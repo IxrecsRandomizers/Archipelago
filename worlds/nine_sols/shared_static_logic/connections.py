@@ -900,6 +900,13 @@ connections_data = [
         "medium_requires": [] # just T-dash
     }, # LS is redundant
     {
+        "from": "W&OS - Left Exit", "to": "W&OS - Center",
+        "requires": [ { "anyOf": [
+            { "item": "Grapple" }, { "item": "Air Dash" }, { "item": "Cloud Leap" }
+        ] } ],
+        "medium_requires": [ { "item": "Trick - Bow Hover" } ] 
+    },
+    {
         "from": "W&OS - Center", "to": "W&OS - Pipeline Panel",
         "requires": [ { "item": "Cloud Leap" } ],
         "medium_requires": [{ "item": "Trick - Bow Hover" }], # long leftward bow hover just under the stalactite
@@ -938,7 +945,7 @@ connections_data = [
     # Thunder Buster and Cloud Piercer S arrows do *not* work on the CS bell, it really has to be CS here
 
     { "from": "W&OS - Left Exit", "to": "Yinglong Canal - Root Node", "requires": [],
-      "portal_name": "WOS_LEFT_PORTAL", "bow_hovers": 1 },
+      "portal_name": "WOS_LEFT_PORTAL", "bow_hovers": 2 },
     { "from": "Yinglong Canal - Root Node", "to": "W&OS - Left Exit", "requires": [
         # YC's bottom right exit is blocked by a door until you do the 2nd GH hack to drain W&OS's yellow water
         { "region": "Greenhouse - 3rd Waterfall Hack" }
