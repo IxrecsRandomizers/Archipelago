@@ -1797,7 +1797,10 @@ connections_data = [
     { "from": "Factory (MR) - Moving Platforms", "to": "Factory (MR) - Root Node", "requires": [] }, # fall farther
 
     # Factory (Production Area)
-    { "from": "Factory (PA) - Lower Left Elevator", "to": "Factory (PA) - Root Node", "requires": [ { "item": "Wall Climb" } ] },
+    { "from": "Factory (PA) - Lower Left Elevator", "to": "Factory (PA) - Root Node", 
+      "requires": [ { "item": "Wall Climb" } ],
+      "ls_requires": [ { "item": "Ledge Grab" }, { "item": "Cloud Leap" } ] # wall slide up the WC walls
+    }, # AD setup can be used however it is 1 try as the only available ledge is too high to reach without CL
     { "from": "Factory (PA) - Root Node", "to": "Factory (PA) - Lower Left Elevator", "requires": [
         { "item": "Cloud Leap" }, { "item": "Ledge Grab" }
     ] }, # ledge storage can do one of the high jumps here, but not all of them
