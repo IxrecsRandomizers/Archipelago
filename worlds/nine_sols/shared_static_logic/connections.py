@@ -999,7 +999,11 @@ connections_data = [
     },
     { "from": "Yinglong Canal - Above Egg Cave", "to": "Yinglong Canal - Farmland Markings", "requires": [] }, # fall
     { "from": "Yinglong Canal - Above Egg Cave", "to": "Yinglong Canal - Egg Cave & Left Exit", "requires": [] }, # fall
-    { "from": "Yinglong Canal - Egg Cave & Left Exit", "to": "Yinglong Canal - Above Egg Cave", "requires": [ { "item": "Cloud Leap" } ] },
+    { "from": "Yinglong Canal - Egg Cave & Left Exit", "to": "Yinglong Canal - Above Egg Cave",
+      "requires": [ { "item": "Cloud Leap" } ],
+      "ls_requires": [ { "item": "Ledge Grab" }, { "item": "Trick - Bow Hover"}, { "item": "Air Dash"} ]
+      # obtain ledge storage then hover to the right below egg check, then vault over spikes and air dash, rest of climb is possible with vaults. 
+    },
     { "from": "Yinglong Canal - Farmland Markings", "to": "Yinglong Canal - Ledges Above Root Node", "requires": [] }, # fall
     { "from": "Yinglong Canal - Farmland Markings", "to": "Yinglong Canal - Root Node", "requires": [] }, # fall
     { "from": "Yinglong Canal - Root Node", "to": "Yinglong Canal - Ledges Above Root Node", "requires": [
