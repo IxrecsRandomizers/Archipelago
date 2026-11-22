@@ -2588,6 +2588,7 @@ connections_data = [
         ]
     },
     { "from": "ED (Passages) - Outside Tianshou Arena", "to": "ED (Passages) - Between Root Node & Tianshou Arena", "requires": [] }, # shortcut rope
+    { "from": "ED (Passages) - Between Root Node & Tianshou Arena", "to": "ED (Passages) - Around Root Node", "requires": [] }, # shortcut elevator
     {
         "from": "ED (Passages) - Between Root Node & Tianshou Arena", "to": "ED (Passages) - Outside Tianshou Arena",
         "ls_requires": [{ "item": "Cloud Leap" }, { "item": "Ledge Grab" }] # triple jump
@@ -2655,9 +2656,11 @@ connections_data = [
     { "from": "ED (Passages) - Outside Tianshou Arena", "to": "ED (Passages) - Tianshou Arena", "requires": [
         { "item": "Mystic Nymph: Scout Mode" } # to disable the triple pink waterfall
     ] },
+    { "from": "ED (Passages) - Tianshou Arena", "to": "ED (Passages) - Outside Tianshou Arena", "requires": [] }, # walk out
     { "from": "ED (Passages) - Tianshou Arena", "to": "ED (Passages) - Upper Elevator", "requires": [
         { "item": "Cloud Leap" }, { "item": "Grapple" } # after defeating Tianshou
     ] },
+    { "from": "ED (Passages) - Upper Elevator", "to": "ED (Passages) - Tianshou Arena", "requires": [] }, # fall down
     { "from": "ED (Passages) - Upper Elevator", "to": "ED (Passages) - Upper Right Exit", "requires": [] }, # one-way door
     # in most speedruns, the rope storage setup known as "miner skip" is all about teleporting past ^this door
     { "from": "ED (Passages) - Upper Right Exit", "to": "ED (Passages) - Laser Gauntlet", "requires": [ { "item": "Tai-Chi Kick" } ] },
