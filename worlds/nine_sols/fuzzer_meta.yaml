@@ -7,3 +7,5 @@ Nine Sols:
   # these options never impact items/locations/logic anyway so there's little value in fuzzing them
   jade_cost_min: 1
   jade_cost_max: 4
+  # entrance randomization is by far the most failure-prone feature, but that's mostly out of our control
+  randomize_entrances: false
