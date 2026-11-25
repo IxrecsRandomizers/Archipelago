@@ -1,5 +1,5 @@
 [
-    { "name": "world_map", "img": "world_map.png", "location_size": 20, "location_border_thickness": 3 },
+    { "name": "world_map", "img": "world_map.png", "location_size": 15, "location_border_thickness": 2 },
     { "name": "four_seasons_pavilion", "img": "four_seasons_pavilion.webp", "location_size": 20, "location_border_thickness": 3 },
     { "name": "skill_tree", "img": "skill_tree_labeled.png", "location_size": 20, "location_border_thickness": 3 },
 

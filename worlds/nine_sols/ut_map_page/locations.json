@@ -17,6 +17,13 @@
                 }]
             },
             {
+                "name": "AFM_RIGHT_PORTAL", "sections": [{ "name": "AFM_RIGHT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 729, "y": 393 },
+                    { "map": "apeman_facility_monitoring", "x": 800, "y": 230 }
+                ]
+            },
+            {
                 "name": "Apeman Facility (Elevator)",
                 "sections": [
                     { "name": "AF (Elevator): Hidden Atop Upper Level Pagoda (Left Chest)" },
@@ -32,6 +39,27 @@
                     "x": 780,
                     "y": 402
                 }]
+            },
+            {
+                "name": "AFE_UPPER_LEFT_PORTAL", "sections": [{ "name": "AFE_UPPER_LEFT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 745, "y": 393 },
+                    { "map": "apeman_facility_elevator", "x": 105, "y": 110 }
+                ]
+            },
+            {
+                "name": "AFE_LOWER_LEFT_PORTAL", "sections": [{ "name": "AFE_LOWER_LEFT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 745, "y": 418 },
+                    { "map": "apeman_facility_elevator", "x": 200, "y": 200 }
+                ]
+            },
+            {
+                "name": "AFE_RIGHT_PORTAL", "sections": [{ "name": "AFE_RIGHT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 812, "y": 418 },
+                    { "map": "apeman_facility_elevator", "x": 200, "y": 200 }
+                ]
             },
             {
                 "name": "Apeman Facility (Depths)",
@@ -54,6 +82,27 @@
                 }]
             },
             {
+                "name": "AFD_RIGHT_PORTAL", "sections": [{ "name": "AFD_RIGHT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 682, "y": 418 },
+                    { "map": "apeman_facility_depths", "x": 200, "y": 200 }
+                ]
+            },
+            {
+                "name": "AFD_UPPER_LEFT_CRATES", "sections": [{ "name": "AFD_UPPER_LEFT_CRATES" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 622, "y": 400 },
+                    { "map": "apeman_facility_depths", "x": 200, "y": 200 }
+                ]
+            },
+            {
+                "name": "AFD_LOWER_LEFT_TRANSPORTER", "sections": [{ "name": "AFD_LOWER_LEFT_TRANSPORTER" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 625, "y": 426 },
+                    { "map": "apeman_facility_depths", "x": 200, "y": 200 }
+                ]
+            },
+            {
                 "name": "Central Hall",
                 "sections": [
                     { "name": "Central Hall: Examine Council Sign" },
@@ -67,6 +116,34 @@
                     "x": 805,
                     "y": 295
                 }]
+            },
+            {
+                "name": "CH_BOTTOM_VENT_SHAFT", "sections": [{ "name": "CH_BOTTOM_VENT_SHAFT" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 793, "y": 310 },
+                    { "map": "central_hall", "x": 200, "y": 200 }
+                ]
+            },
+            {
+                "name": "CH_UPPER_RIGHT_PORTAL", "sections": [{ "name": "CH_UPPER_RIGHT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 865, "y": 286 },
+                    { "map": "central_hall", "x": 200, "y": 200 }
+                ]
+            },
+            {
+                "name": "CH_LOWER_RIGHT_PORTAL", "sections": [{ "name": "CH_LOWER_RIGHT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 860, "y": 305 },
+                    { "map": "central_hall", "x": 200, "y": 200 }
+                ]
+            },
+            {
+                "name": "CH_UPPER_LEFT_PORTAL", "sections": [{ "name": "CH_UPPER_LEFT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 745, "y": 305 },
+                    { "map": "central_hall", "x": 200, "y": 200 }
+                ]
             },
             {
                 "name": "Four Seasons Pavilion",
@@ -119,8 +196,8 @@
                 ],
                 "map_locations": [{
                     "map": "world_map",
-                    "x": 852,
-                    "y": 215
+                    "x": 857,
+                    "y": 220
                 }]
             },
             {
@@ -137,7 +214,7 @@
                 "map_locations": [{
                     "map": "world_map",
                     "x": 877,
-                    "y": 215
+                    "y": 220
                 }]
             },
             {
@@ -161,8 +238,8 @@
                 ],
                 "map_locations": [{
                     "map": "world_map",
-                    "x": 902,
-                    "y": 215
+                    "x": 897,
+                    "y": 220
                 }]
             },
             {
@@ -199,7 +276,7 @@
                 "map_locations": [{
                     "map": "world_map",
                     "x": 877,
-                    "y": 190
+                    "y": 200
                 }]
             },
             {
@@ -219,6 +296,20 @@
                 }]
             },
             {
+                "name": "CC_LEFT_PORTAL", "sections": [{ "name": "CC_LEFT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 580, "y": 305 },
+                    { "map": "cortex_center", "x": 50, "y": 280 }
+                ]
+            },
+            {
+                "name": "CC_RIGHT_PORTAL", "sections": [{ "name": "CC_RIGHT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 730, "y": 305 },
+                    { "map": "cortex_center", "x": 810, "y": 302 }
+                ]
+            },
+            {
                 "name": "Central Transport Hub",
                 "sections": [
                     { "name": "CTH: Large Elevator Shaft" },
@@ -235,6 +326,41 @@
                 }]
             },
             {
+                "name": "CTH_UPPER_LEFT_PORTAL", "sections": [{ "name": "CTH_UPPER_LEFT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 875, "y": 305 },
+                    { "map": "central_transport_hub", "x": 200, "y": 200 }
+                ]
+            },
+            {
+                "name": "CTH_MIDDLE_LEFT_PORTAL", "sections": [{ "name": "CTH_MIDDLE_LEFT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 783, "y": 343 },
+                    { "map": "central_transport_hub", "x": 200, "y": 200 }
+                ]
+            },
+            {
+                "name": "CTH_LOWER_LEFT_PORTAL", "sections": [{ "name": "CTH_LOWER_LEFT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 827, "y": 418 },
+                    { "map": "central_transport_hub", "x": 200, "y": 200 }
+                ]
+            },
+            {
+                "name": "CTH_RIGHT_CRATES", "sections": [{ "name": "CTH_RIGHT_CRATES" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 896, "y": 377 },
+                    { "map": "central_transport_hub", "x": 200, "y": 200 }
+                ]
+            },
+            {
+                "name": "CTH_LOWER_RIGHT_TRANSPORTER", "sections": [{ "name": "CTH_LOWER_RIGHT_TRANSPORTER" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 916, "y": 416 },
+                    { "map": "central_transport_hub", "x": 200, "y": 200 }
+                ]
+            },
+            {
                 "name": "Power Reservoir (East)",
                 "sections": [
                     { "name": "PR (East): After Lasers" },
@@ -249,6 +375,20 @@
                     "x": 912,
                     "y": 475
                 }]
+            },
+            {
+                "name": "PRE_LEFT_TRANSPORTER", "sections": [{ "name": "PRE_LEFT_TRANSPORTER" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 859, "y": 484 },
+                    { "map": "power_reservoir_east", "x": 200, "y": 200 }
+                ]
+            },
+            {
+                "name": "PRE_RIGHT_TRANSPORTER", "sections": [{ "name": "PRE_RIGHT_TRANSPORTER" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 968, "y": 485 },
+                    { "map": "power_reservoir_east", "x": 200, "y": 200 }
+                ]
             },
             {
                 "name": "Power Reservoir (Central)",
@@ -270,6 +410,27 @@
                 }]
             },
             {
+                "name": "PRC_RIGHT_TRANSPORTER", "sections": [{ "name": "PRC_RIGHT_TRANSPORTER" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 838, "y": 484 },
+                    { "map": "power_reservoir_central", "x": 200, "y": 200 }
+                ]
+            },
+            {
+                "name": "PRC_LEFT_TRANSPORTER", "sections": [{ "name": "PRC_LEFT_TRANSPORTER" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 693, "y": 484 },
+                    { "map": "power_reservoir_central", "x": 200, "y": 200 }
+                ]
+            },
+            {
+                "name": "PRC_BOSS_PORTAL", "sections": [{ "name": "PRC_BOSS_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 766, "y": 493 },
+                    { "map": "power_reservoir_central", "x": 200, "y": 200 }
+                ]
+            },
+            {
                 "name": "Power Reservoir (West)",
                 "sections": [
                     { "name": "PR (West): Below Root Node" },
@@ -287,6 +448,20 @@
                 }]
             },
             {
+                "name": "PRW_LEFT_TRANSPORTER", "sections": [{ "name": "PRW_LEFT_TRANSPORTER" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 563, "y": 484 },
+                    { "map": "power_reservoir_west", "x": 200, "y": 200 }
+                ]
+            },
+            {
+                "name": "PRW_RIGHT_TRANSPORTER", "sections": [{ "name": "PRW_RIGHT_TRANSPORTER" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 675, "y": 484 },
+                    { "map": "power_reservoir_west", "x": 200, "y": 200 }
+                ]
+            },
+            {
                 "name": "Radiant Pagoda",
                 "sections": [
                     { "name": "Examine Radiant Pagoda Control Panel" },
@@ -298,6 +473,13 @@
                     "x": 765,
                     "y": 521
                 }]
+            },
+            {
+                "name": "RP_PORTAL", "sections": [{ "name": "RP_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 741, "y": 507 },
+                    { "map": "radiant_pagoda", "x": 200, "y": 200 }
+                ]
             },
 
             {
@@ -323,6 +505,34 @@
                 }]
             },
             {
+                "name": "LYR_LEFT_PORTAL", "sections": [{ "name": "LYR_LEFT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 922, "y": 286 },
+                    { "map": "lake_yaochi_ruins", "x": 200, "y": 200 }
+                ]
+            },
+            {
+                "name": "LYR_TOP_ELEVATOR", "sections": [{ "name": "LYR_TOP_ELEVATOR" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 1030, "y": 269 },
+                    { "map": "lake_yaochi_ruins", "x": 200, "y": 200 }
+                ]
+            },
+            {
+                "name": "LYR_BOTTOM_PORTAL", "sections": [{ "name": "LYR_BOTTOM_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 1071, "y": 307 },
+                    { "map": "lake_yaochi_ruins", "x": 200, "y": 200 }
+                ]
+            },
+            {
+                "name": "LYR_RIGHT_PORTAL", "sections": [{ "name": "LYR_RIGHT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 1185, "y": 276 },
+                    { "map": "lake_yaochi_ruins", "x": 200, "y": 200 }
+                ]
+            },
+            {
                 "name": "Greenhouse",
                 "sections": [
                     { "name": "Greenhouse: Hackable Rope Near Wreckage" },
@@ -342,6 +552,13 @@
                 }]
             },
             {
+                "name": "GREENHOUSE_BOTTOM_PORTAL", "sections": [{ "name": "GREENHOUSE_BOTTOM_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 1205, "y": 345 },
+                    { "map": "greenhouse", "x": 200, "y": 200 }
+                ]
+            },
+            {
                 "name": "Water & Oxygen Synthesis",
                 "sections": [
                     { "name": "W&OS: High Platforms Right of Center" },
@@ -358,6 +575,20 @@
                 }]
             },
             {
+                "name": "WOS_LEFT_PORTAL", "sections": [{ "name": "WOS_LEFT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 1108, "y": 382 },
+                    { "map": "water_and_oxygen_synthesis", "x": 200, "y": 200 }
+                ]
+            },
+            {
+                "name": "WOS_RIGHT_PORTAL", "sections": [{ "name": "WOS_RIGHT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 1376, "y": 355 },
+                    { "map": "water_and_oxygen_synthesis", "x": 200, "y": 200 }
+                ]
+            },
+            {
                 "name": "Agrarian Hall",
                 "sections": [
                     { "name": "Chest After Goumang (1st Reward)" },
@@ -369,6 +600,20 @@
                     "x": 1355,
                     "y": 299
                 }]
+            },
+            {
+                "name": "AH_LEFT_PORTAL", "sections": [{ "name": "AH_LEFT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 1324, "y": 305 },
+                    { "map": "agrarian_hall", "x": 200, "y": 200 }
+                ]
+            },
+            {
+                "name": "AH_RIGHT_ELEVATOR", "sections": [{ "name": "AH_RIGHT_ELEVATOR" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 1377, "y": 312 },
+                    { "map": "agrarian_hall", "x": 200, "y": 200 }
+                ]
             },
             {
                 "name": "Yinglong Canal",
@@ -386,6 +631,27 @@
                     "x": 1067,
                     "y": 355
                 }]
+            },
+            {
+                "name": "YC_TOP_PORTAL", "sections": [{ "name": "YC_TOP_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 1056, "y": 307 },
+                    { "map": "yinglong_canal", "x": 200, "y": 200 }
+                ]
+            },
+            {
+                "name": "YC_LEFT_PORTAL", "sections": [{ "name": "YC_LEFT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 1040, "y": 382 },
+                    { "map": "yinglong_canal", "x": 200, "y": 200 }
+                ]
+            },
+            {
+                "name": "YC_RIGHT_PORTAL", "sections": [{ "name": "YC_RIGHT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 1093, "y": 382 },
+                    { "map": "yinglong_canal", "x": 200, "y": 200 }
+                ]
             },
 
             {
@@ -411,6 +677,55 @@
                 }]
             },
             {
+                "name": "FGH_LEFT_PORTAL", "sections": [{ "name": "FGH_LEFT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 308, "y": 294 },
+                    { "map": "factory_great_hall", "x": 50, "y": 280 }
+                ]
+            },
+            {
+                "name": "FGH_BOTTOM_LEFT_ELEVATOR", "sections": [{ "name": "FGH_BOTTOM_LEFT_ELEVATOR" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 343, "y": 301 },
+                    { "map": "factory_great_hall", "x": 50, "y": 280 }
+                ]
+            },
+            {
+                "name": "FGH_TOP_LEFT_ELEVATOR", "sections": [{ "name": "FGH_TOP_LEFT_ELEVATOR" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 343, "y": 272 },
+                    { "map": "factory_great_hall", "x": 50, "y": 280 }
+                ]
+            },
+            {
+                "name": "FGH_BOTTOM_RIGHT_HOLE_PORTAL", "sections": [{ "name": "FGH_BOTTOM_RIGHT_HOLE_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 380, "y": 310 },
+                    { "map": "factory_great_hall", "x": 50, "y": 280 }
+                ]
+            },
+            {
+                "name": "FGH_BOTTOM_RIGHT_SIDE_CAVE_PORTAL", "sections": [{ "name": "FGH_BOTTOM_RIGHT_SIDE_CAVE_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 395, "y": 310 },
+                    { "map": "factory_great_hall", "x": 50, "y": 280 }
+                ]
+            },
+            {
+                "name": "FGH_TOP_RIGHT_ELEVATOR", "sections": [{ "name": "FGH_TOP_RIGHT_ELEVATOR" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 464, "y": 272 },
+                    { "map": "factory_great_hall", "x": 50, "y": 280 }
+                ]
+            },
+            {
+                "name": "FGH_RIGHT_PORTAL", "sections": [{ "name": "FGH_RIGHT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 515, "y": 305 },
+                    { "map": "factory_great_hall", "x": 50, "y": 280 }
+                ]
+            },
+            {
                 "name": "Factory (Underground)",
                 "sections": [
                     { "name": "Factory (U): Near Upper Right Exit" },
@@ -430,6 +745,48 @@
                 }]
             },
             {
+                "name": "FU_LOWER_RIGHT_CRATES", "sections": [{ "name": "FU_LOWER_RIGHT_CRATES" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 412, "y": 381 },
+                    { "map": "factory_underground", "x": 100, "y": 100 }
+                ]
+            },
+            {
+                "name": "FU_UPPER_RIGHT_SIDE_CAVE_PORTAL", "sections": [{ "name": "FU_UPPER_RIGHT_SIDE_CAVE_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 395, "y": 350 },
+                    { "map": "factory_underground", "x": 100, "y": 100 }
+                ]
+            },
+            {
+                "name": "FU_TOP_LEFT_ELEVATOR", "sections": [{ "name": "FU_TOP_LEFT_ELEVATOR" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 343, "y": 362 },
+                    { "map": "factory_underground", "x": 100, "y": 100 }
+                ]
+            },
+            {
+                "name": "FU_MIDDLE_RIGHT_PORTAL", "sections": [{ "name": "FU_MIDDLE_RIGHT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 417, "y": 357 },
+                    { "map": "factory_underground", "x": 100, "y": 100 }
+                ]
+            },
+            {
+                "name": "FU_BOTTOM_ELEVATOR", "sections": [{ "name": "FU_BOTTOM_ELEVATOR" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 374, "y": 383 },
+                    { "map": "factory_underground", "x": 100, "y": 100 }
+                ]
+            },
+            {
+                "name": "FU_LEFT_PORTAL", "sections": [{ "name": "FU_LEFT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 295, "y": 357 },
+                    { "map": "factory_underground", "x": 100, "y": 100 }
+                ]
+            },
+            {
                 "name": "Outer Warehouse",
                 "sections": [
                     { "name": "OW: Retrieve Chip From Shanhai 9000" },
@@ -447,6 +804,34 @@
                 }]
             },
             {
+                "name": "OW_MIDDLE_RIGHT_PORTAL", "sections": [{ "name": "OW_MIDDLE_RIGHT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 255, "y": 294 },
+                    { "map": "outer_warehouse", "x": 100, "y": 100 }
+                ]
+            },
+            {
+                "name": "OW_LOWER_RIGHT_PORTAL", "sections": [{ "name": "OW_LOWER_RIGHT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 255, "y": 325 },
+                    { "map": "outer_warehouse", "x": 100, "y": 100 }
+                ]
+            },
+            {
+                "name": "OW_MIDDLE_LEFT_PORTAL", "sections": [{ "name": "OW_MIDDLE_LEFT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 196, "y": 315 },
+                    { "map": "outer_warehouse", "x": 100, "y": 100 }
+                ]
+            },
+            {
+                "name": "OW_UPPER_LEFT_CRATES", "sections": [{ "name": "OW_UPPER_LEFT_CRATES" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 201, "y": 274 },
+                    { "map": "outer_warehouse", "x": 100, "y": 100 }
+                ]
+            },
+            {
                 "name": "Inner Warehouse",
                 "sections": [
                     { "name": "IW: Hack 3 Statues" },
@@ -461,6 +846,20 @@
                     "x": 95,
                     "y": 265
                 }]
+            },
+            {
+                "name": "IW_RIGHT_CRATES", "sections": [{ "name": "IW_RIGHT_CRATES" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 153, "y": 274 },
+                    { "map": "inner_warehouse", "x": 100, "y": 100 }
+                ]
+            },
+            {
+                "name": "IW_BOTTOM_ELEVATOR", "sections": [{ "name": "IW_BOTTOM_ELEVATOR" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 87, "y": 285 },
+                    { "map": "inner_warehouse", "x": 100, "y": 100 }
+                ]
             },
             {
                 "name": "Boundless Repository",
@@ -484,6 +883,20 @@
                 }]
             },
             {
+                "name": "BR_TOP_ELEVATOR", "sections": [{ "name": "BR_TOP_ELEVATOR" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 65, "y": 307 },
+                    { "map": "boundless_repository", "x": 100, "y": 100 }
+                ]
+            },
+            {
+                "name": "BR_RIGHT_PORTAL", "sections": [{ "name": "BR_RIGHT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 115, "y": 315 },
+                    { "map": "boundless_repository", "x": 100, "y": 100 }
+                ]
+            },
+            {
                 "name": "Yangu Hall",
                 "sections": [
                     { "name": "Yanlao's Tianhuo Flower" },
@@ -494,6 +907,20 @@
                     "x": 155,
                     "y": 312
                 }]
+            },
+            {
+                "name": "YH_LEFT_PORTAL", "sections": [{ "name": "YH_LEFT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 130, "y": 315 },
+                    { "map": "yangu_hall", "x": 100, "y": 100 }
+                ]
+            },
+            {
+                "name": "YH_RIGHT_PORTAL", "sections": [{ "name": "YH_RIGHT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 181, "y": 315 },
+                    { "map": "yangu_hall", "x": 100, "y": 100 }
+                ]
             },
             {
                 "name": "Abandoned Mines",
@@ -511,6 +938,20 @@
                     "x": 472,
                     "y": 349
                 }]
+            },
+            {
+                "name": "AM_LEFT_PORTAL", "sections": [{ "name": "AM_LEFT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 432, "y": 357 },
+                    { "map": "abandoned_mines", "x": 100, "y": 100 }
+                ]
+            },
+            {
+                "name": "AM_RIGHT_PORTAL", "sections": [{ "name": "AM_RIGHT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 513, "y": 343 },
+                    { "map": "abandoned_mines", "x": 100, "y": 100 }
+                ]
             },
             {
                 "name": "Prison",
@@ -532,6 +973,13 @@
                 }]
             },
             {
+                "name": "PRISON_ELEVATOR", "sections": [{ "name": "PRISON_ELEVATOR" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 272, "y": 462 },
+                    { "map": "prison", "x": 100, "y": 100 }
+                ]
+            },
+            {
                 "name": "Factory (Machine Room)",
                 "sections": [
                     { "name": "Factory (MR): Below Right Elevator" },
@@ -547,6 +995,20 @@
                     "x": 327,
                     "y": 425
                 }]
+            },
+            {
+                "name": "FMR_LOWER_LEFT_ELEVATOR", "sections": [{ "name": "FMR_LOWER_LEFT_ELEVATOR" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 272, "y": 435 },
+                    { "map": "factory_machine_room", "x": 100, "y": 100 }
+                ]
+            },
+            {
+                "name": "FMR_RIGHT_ELEVATOR", "sections": [{ "name": "FMR_RIGHT_ELEVATOR" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 374, "y": 418 },
+                    { "map": "factory_machine_room", "x": 100, "y": 100 }
+                ]
             },
             {
                 "name": "Factory (Production Area)",
@@ -573,6 +1035,27 @@
                 }]
             },
             {
+                "name": "FPA_BOTTOM_LEFT_ELEVATOR", "sections": [{ "name": "FPA_BOTTOM_LEFT_ELEVATOR" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 343, "y": 239 },
+                    { "map": "factory_production_area", "x": 100, "y": 100 }
+                ]
+            },
+            {
+                "name": "FPA_BOTTOM_RIGHT_ELEVATOR", "sections": [{ "name": "FPA_BOTTOM_RIGHT_ELEVATOR" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 464, "y": 239 },
+                    { "map": "factory_production_area", "x": 100, "y": 100 }
+                ]
+            },
+            {
+                "name": "FPA_TOP_ELEVATOR", "sections": [{ "name": "FPA_TOP_ELEVATOR" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 440, "y": 197 },
+                    { "map": "factory_production_area", "x": 100, "y": 100 }
+                ]
+            },
+            {
                 "name": "Shengwu Hall",
                 "sections": [
                     { "name": "Examine Sphere Before Jiequan" },
@@ -588,6 +1071,13 @@
                 }]
             },
             {
+                "name": "SH_ELEVATOR", "sections": [{ "name": "SH_ELEVATOR" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 440, "y": 164 },
+                    { "map": "shengwu_hall", "x": 100, "y": 100 }
+                ]
+            },
+            {
                 "name": "Underground Cave",
                 "sections": [
                     { "name": "UC: Examine Stone Inscription" },
@@ -601,6 +1091,13 @@
                 }]
             },
             {
+                "name": "UC_LEFT_PORTAL", "sections": [{ "name": "UC_LEFT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 528, "y": 343 },
+                    { "map": "underground_cave", "x": 100, "y": 100 }
+                ]
+            },
+            {
                 "name": "Peach Blossom Village",
                 "sections": [
                     { "name": "Village: Defeat Red Tiger Elite: Lieguan" }
@@ -610,6 +1107,13 @@
                     "x": 658,
                     "y": 336
                 }]
+            },
+            {
+                "name": "PBV_EAST_RIGHT_PORTAL", "sections": [{ "name": "PBV_EAST_RIGHT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 672, "y": 343 },
+                    { "map": "galactic_dock_and_village", "x": 100, "y": 100 }
+                ]
             },
             {
                 "name": "Galactic Dock",
@@ -623,6 +1127,20 @@
                     "x": 726,
                     "y": 336
                 }]
+            },
+            {
+                "name": "GD_LEFT_PORTAL", "sections": [{ "name": "GD_LEFT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 687, "y": 343 },
+                    { "map": "galactic_dock_and_village", "x": 100, "y": 100 }
+                ]
+            },
+            {
+                "name": "GD_RIGHT_PORTAL", "sections": [{ "name": "GD_RIGHT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 768, "y": 343 },
+                    { "map": "galactic_dock_and_village", "x": 100, "y": 100 }
+                ]
             },
             {
                 "name": "Grotto of Scriptures (Entry)",
@@ -653,6 +1171,41 @@
                 }]
             },
             {
+                "name": "GOSY_LEFT_PORTAL", "sections": [{ "name": "GOSY_LEFT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 1240, "y": 276 },
+                    { "map": "grotto_of_scriptures_entry", "x": 100, "y": 100 }
+                ]
+            },
+            {
+                "name": "GOSY_LOWER_RIGHT_PORTAL", "sections": [{ "name": "GOSY_LOWER_RIGHT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 1309, "y": 305 },
+                    { "map": "grotto_of_scriptures_entry", "x": 100, "y": 100 }
+                ]
+            },
+            {
+                "name": "GOSY_LOWER_ELEVATOR_SHAFT", "sections": [{ "name": "GOSY_LOWER_ELEVATOR_SHAFT" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 1259, "y": 295 },
+                    { "map": "grotto_of_scriptures_entry", "x": 100, "y": 100 }
+                ]
+            },
+            {
+                "name": "GOSY_UPPER_RIGHT_PORTAL", "sections": [{ "name": "GOSY_UPPER_RIGHT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 1323, "y": 273 },
+                    { "map": "grotto_of_scriptures_entry", "x": 100, "y": 100 }
+                ]
+            },
+            {
+                "name": "GOSY_UPPER_ELEVATOR", "sections": [{ "name": "GOSY_UPPER_ELEVATOR" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 1298, "y": 280 },
+                    { "map": "grotto_of_scriptures_entry", "x": 100, "y": 100 }
+                ]
+            },
+            {
                 "name": "Grotto of Scriptures (East)",
                 "sections": [
                     { "name": "GoS (East): Lurker Near Lower Exit" },
@@ -677,6 +1230,27 @@
                 }]
             },
             {
+                "name": "GOSE_LOWER_PORTAL", "sections": [{ "name": "GOSE_LOWER_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 1338, "y": 273 },
+                    { "map": "grotto_of_scriptures_east", "x": 100, "y": 100 }
+                ]
+            },
+            {
+                "name": "GOSE_MIDDLE_PORTAL", "sections": [{ "name": "GOSE_MIDDLE_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 1324, "y": 240 },
+                    { "map": "grotto_of_scriptures_east", "x": 100, "y": 100 }
+                ]
+            },
+            {
+                "name": "GOSE_UPPER_PORTAL", "sections": [{ "name": "GOSE_UPPER_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 1324, "y": 208 },
+                    { "map": "grotto_of_scriptures_east", "x": 100, "y": 100 }
+                ]
+            },
+            {
                 "name": "Grotto of Scriptures (West)",
                 "sections": [
                     { "name": "GoS (West): Above Elevator" },
@@ -696,6 +1270,48 @@
                 }]
             },
             {
+                "name": "GOSW_UPPER_RIGHT_PORTAL", "sections": [{ "name": "GOSW_UPPER_RIGHT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 1309, "y": 208 },
+                    { "map": "grotto_of_scriptures_west", "x": 100, "y": 100 }
+                ]
+            },
+            {
+                "name": "GOSW_MIDDLE_RIGHT_PORTAL", "sections": [{ "name": "GOSW_MIDDLE_RIGHT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 1309, "y": 240 },
+                    { "map": "grotto_of_scriptures_west", "x": 100, "y": 100 }
+                ]
+            },
+            {
+                "name": "GOSW_LOWER_RIGHT_ELEVATOR", "sections": [{ "name": "GOSW_LOWER_RIGHT_ELEVATOR" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 1298, "y": 228 },
+                    { "map": "grotto_of_scriptures_west", "x": 100, "y": 100 }
+                ]
+            },
+            {
+                "name": "GOSW_LOWER_LEFT_TRANSPORTER", "sections": [{ "name": "GOSW_LOWER_LEFT_TRANSPORTER" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 1240, "y": 246 },
+                    { "map": "grotto_of_scriptures_west", "x": 100, "y": 100 }
+                ]
+            },
+            {
+                "name": "GOSW_UPPER_LEFT_PORTAL", "sections": [{ "name": "GOSW_UPPER_LEFT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 1236, "y": 210 },
+                    { "map": "grotto_of_scriptures_west", "x": 100, "y": 100 }
+                ]
+            },
+            {
+                "name": "GOSW_BOSS_PORTAL", "sections": [{ "name": "GOSW_BOSS_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 1265, "y": 208 },
+                    { "map": "grotto_of_scriptures_west", "x": 100, "y": 100 }
+                ]
+            },
+            {
                 "name": "Ancient Stone Pillar",
                 "sections": [
                     { "name": "Examine Ji" },
@@ -707,6 +1323,13 @@
                     "x": 1312,
                     "y": 160
                 }]
+            },
+            {
+                "name": "ASP_PORTAL", "sections": [{ "name": "ASP_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 1312, "y": 175 },
+                    { "map": "ancient_stone_pillar", "x": 100, "y": 100 }
+                ]
             },
             {
                 "name": "Sky Tower",
@@ -725,6 +1348,20 @@
                     "x": 1023,
                     "y": 227
                 }]
+            },
+            {
+                "name": "ST_BOTTOM_ELEVATOR", "sections": [{ "name": "ST_BOTTOM_ELEVATOR" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 1030, "y": 253 },
+                    { "map": "sky_tower", "x": 100, "y": 100 }
+                ]
+            },
+            {
+                "name": "ST_RIGHT_PORTAL", "sections": [{ "name": "ST_RIGHT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 1042, "y": 230 },
+                    { "map": "sky_tower", "x": 100, "y": 100 }
+                ]
             },
             {
                 "name": "Empyrean Dist. (Passages)",
@@ -747,6 +1384,34 @@
                     "x": 1120,
                     "y": 227
                 }]
+            },
+            {
+                "name": "EDP_LEFT_PORTAL", "sections": [{ "name": "EDP_LEFT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 1057, "y": 230 },
+                    { "map": "empyrean_district_passages", "x": 100, "y": 100 }
+                ]
+            },
+            {
+                "name": "EDP_LOWER_RIGHT_TRANSPORTER", "sections": [{ "name": "EDP_LOWER_RIGHT_TRANSPORTER" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 1198, "y": 246 },
+                    { "map": "empyrean_district_passages", "x": 100, "y": 100 }
+                ]
+            },
+            {
+                "name": "EDP_UPPER_RIGHT_PORTAL", "sections": [{ "name": "EDP_UPPER_RIGHT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 1188, "y": 210 },
+                    { "map": "empyrean_district_passages", "x": 100, "y": 100 }
+                ]
+            },
+            {
+                "name": "EDP_TOP_ELEVATOR", "sections": [{ "name": "EDP_TOP_ELEVATOR" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 1122, "y": 215 },
+                    { "map": "empyrean_district_passages", "x": 100, "y": 100 }
+                ]
             },
             {
                 "name": "Empyrean Dist. (Living Area)",
@@ -777,6 +1442,20 @@
                 }]
             },
             {
+                "name": "EDLA_BOTTOM_ELEVATOR", "sections": [{ "name": "EDLA_BOTTOM_ELEVATOR" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 1122, "y": 180 },
+                    { "map": "empyrean_district_living_area", "x": 100, "y": 100 }
+                ]
+            },
+            {
+                "name": "EDLA_LEFT_PORTAL", "sections": [{ "name": "EDLA_LEFT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 1112, "y": 188 },
+                    { "map": "empyrean_district_living_area", "x": 100, "y": 100 }
+                ]
+            },
+            {
                 "name": "Empyrean Dist. (Sanctum)",
                 "sections": [
                     { "name": "ED (Sanctum): Examine Monitoring Panel" },
@@ -795,6 +1474,20 @@
                 }]
             },
             {
+                "name": "EDS_RIGHT_PORTAL", "sections": [{ "name": "EDS_RIGHT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 1097, "y": 188 },
+                    { "map": "empyrean_district_sanctum", "x": 100, "y": 100 }
+                ]
+            },
+            {
+                "name": "EDS_BOSS_PORTAL", "sections": [{ "name": "EDS_BOSS_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 1039, "y": 152 },
+                    { "map": "empyrean_district_sanctum", "x": 100, "y": 100 }
+                ]
+            },
+            {
                 "name": "Nobility Hall",
                 "sections": [
                     { "name": "Nuwa's Vital Sanctum" },
@@ -806,6 +1499,13 @@
                     "x": 993,
                     "y": 112
                 }]
+            },
+            {
+                "name": "NH_PORTAL", "sections": [{ "name": "NH_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 992, "y": 126 },
+                    { "map": "nobility_hall", "x": 100, "y": 100 }
+                ]
             },
             {
                 "name": "Tiandao Research Center",
@@ -830,6 +1530,20 @@
                     "x": 982,
                     "y": 355
                 }]
+            },
+            {
+                "name": "TRC_LEFT_CRATES", "sections": [{ "name": "TRC_LEFT_CRATES" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 945, "y": 377 },
+                    { "map": "tiandao_research_center", "x": 100, "y": 100 }
+                ]
+            },
+            {
+                "name": "TRC_RIGHT_PORTAL", "sections": [{ "name": "TRC_RIGHT_PORTAL" }],
+                "map_locations": [
+                    { "map": "world_map", "x": 1025, "y": 382 },
+                    { "map": "tiandao_research_center", "x": 100, "y": 100 }
+                ]
             },
             {
                 "name": "Defeat Eigong",
