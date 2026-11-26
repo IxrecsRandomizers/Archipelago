@@ -82,6 +82,7 @@ class NineSolsWorld(World):
         "map_page_setting_key": "{player}_{team}_nine_sols_area",
         "map_page_index": map_page_index
     }
+    found_entrances_datastorage_key = "{player}_{team}_nine_sols_found_entrances"
 
     using_ut: bool
     jade_costs: dict[str, int] | str
@@ -158,6 +159,12 @@ class NineSolsWorld(World):
     def create_items(self) -> None:
         create_items(self)
 
+    portal_name_to_entrance: dict[str, Entrance] = {}
+    # Map from all the Entrance objects generated in this slot to the
+    # .connected_region values they would have if connected.
+    # Only used by reconnect_found_entrances() in UT regen.
+    deferred_entrances: dict[Entrance, Region | None] = {}
+
     def connect_entrances(self) -> None:
         if self.er_pairings: # UT regen: we need to "plando" the pairings from slot_data
             vanilla_one_ways: dict[str, str] = {} # portal_name to one_way_target_name
@@ -179,14 +186,25 @@ class NineSolsWorld(World):
                         departure_only_portal_to_ap_entrance[entrance.name] = entrance
                         arrival_only_portal_to_ap_region[one_way_target_name] = entrance.connected_region
 
+            should_defer = (self.multiworld.__getattribute__("enforce_deferred_connections") != "off")
+
             for pairing in self.er_pairings:
                 assert (pairing[0] in two_way_portal_to_entrance or pairing[0] in departure_only_portal_to_ap_entrance), f"entrance {pairing[0]} in slot data not in world"
                 if pairing[0] in two_way_portal_to_entrance:
                     assert pairing[1] in two_way_portal_to_entrance, f"two-way portal {pairing[0]} mapped to one-way portal {pairing[1]}"
-                    two_way_portal_to_entrance[pairing[0]].connected_region = two_way_portal_to_entrance[pairing[1]].parent_region
+                    entrance = two_way_portal_to_entrance[pairing[0]]
+                    connected_region = two_way_portal_to_entrance[pairing[1]].parent_region
                 else:
                     assert pairing[1] in arrival_only_portal_to_ap_region, f"entrance {pairing[1]} not found in arrival_only_portal_to_ap_region"
-                    departure_only_portal_to_ap_entrance[pairing[0]].connected_region = arrival_only_portal_to_ap_region[pairing[1]]
+                    entrance = departure_only_portal_to_ap_entrance[pairing[0]]
+                    connected_region = arrival_only_portal_to_ap_region[pairing[1]]
+
+                if should_defer:
+                    self.portal_name_to_entrance[entrance.name] = entrance
+                    self.deferred_entrances[entrance] = connected_region
+                    entrance.connected_region = None
+                else:
+                    entrance.connected_region = connected_region
 
         elif self.options.randomize_entrances: # regular gen: we need to actually randomize the entrances
             placement_state = randomize_entrances(
@@ -200,6 +218,19 @@ class NineSolsWorld(World):
                 }
             )
             self.er_pairings = placement_state.pairings
+
+    # An example of the data storage we're expecting to see:
+    # _found_key = "1_0_nine_sols_found_entrances"
+    # data_storage_value = {
+    #     "BR_TOP_ELEVATOR": True,
+    #     "FGH_TOP_LEFT_ELEVATOR": True,
+    # }
+    def reconnect_found_entrances(self, _found_key, data_storage_value):
+        if data_storage_value:
+            for (k, v) in data_storage_value.items():
+                if v:
+                    entrance = self.portal_name_to_entrance[k]
+                    entrance.connected_region = self.deferred_entrances[entrance]
 
     def get_filler_item_name(self) -> str:
         # Used in corner cases (e.g. plando, item_links, start_inventory_from_pool)
