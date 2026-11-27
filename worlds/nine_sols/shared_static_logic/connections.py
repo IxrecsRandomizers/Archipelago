@@ -2363,7 +2363,12 @@ connections_data = [
                 { "item": "Ledge Grab" } # you can also fall below the rope, Cloud Leap around the other side of it, and grab onto the next platform
                 # apparently this is possible with CL only, but I need CL + LG to make it feasible
             ] }
-        ]
+        ],
+        "medium_requires": [ # an alternative solution to the long red rope is bow hovering between two of the toggling platforms below it
+            {"item": "Trick - Bow Hover"},
+            {"item": "Cloud Leap"},
+            { "item": "Wall Climb" }, # the green wall before the final ropes is still mandatory
+        ],
     },
     { "from": "Sky Tower - Stowaway", "to": "Sky Tower - Upper Checkpoint Platform", "requires": [] }, # fall
     {
