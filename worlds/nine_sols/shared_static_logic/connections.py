@@ -1653,6 +1653,17 @@ connections_data = [
         ] } ]
     },
     { "from": "AM - Above Root Node", "to": "AM - Upper Right Exit", "requires": [ { "item": "Grapple" } ] },
+    { # matters in ER
+        "from": "AM - Upper Right Exit", "to": "AM - Above Root Node",
+        "requires": [{"item": "Grapple"}], # the intended zipline
+        "medium_requires": [{"item": "Trick - Bow Hover"}],
+    },
+    # AD or CL while blindly holding left does get you past the spikes onto one of the lower platforms,
+    # which is technically not the same region as ARN, even if CL makes it easy to climb back up to ARN.
+    {"from": "AM - Upper Right Exit", "to": "AM - Behind One-Way Barrier Next To Root Node", "requires": [{"anyOf": [
+        {"item": "Air Dash"},
+        {"item": "Cloud Leap"}
+    ]}]}, # can also single jump and fall precisely in the dark, but I'd rather not include that
     {
         "from": "AM - Highest Light Spinner", "to": "AM - Upper Right Exit",
         "medium_requires": [{ "item": "Trick - Bow Hover" }],
