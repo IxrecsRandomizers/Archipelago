@@ -1963,6 +1963,7 @@ connections_data = [
         { "anyOf": [ { "item": "Wall Climb" }, { "item": "Cloud Leap" } ] }
     ] },
     { "from": "UC - Camp", "to": "Lieguan Arena", "requires": [] },
+    {"from": "Lieguan Arena", "to": "UC - Camp", "requires": []},
 
     { "from": "Lieguan Arena", "to": "Galactic Dock - Left Exit", "requires": [], "portal_name": "PBV_EAST_RIGHT_PORTAL" }, # TODO: combat logic?
     # one-way connection, so this reverse connection is logically redundant / only here to get ER'd
