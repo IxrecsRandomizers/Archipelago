@@ -1482,7 +1482,7 @@ connections_data = [
     { "from": "BR - Gauntlet Part 2 (Before Laser Hallway)", "to": "BR - Gauntlet Part 2 (After Laser Hallway)", "requires": [
         { "item": "Wall Climb" } # much longer green wall, so there's finally no alternative to WC
     ] },
-    { "from": "BR - Gauntlet Part 2 (After Laser Hallway)", "to": "BR - After Gauntlet", "requires": [
+    { "from": "BR - Gauntlet Part 2 (After Laser Hallway)", "to": "BR - Finished Gauntlet", "requires": [
         # remaining Part 2 platforming is all doable with AD, among other stuff, but AD is hard-required later
         { "item": "Wall Climb" }, { "item": "Tai-Chi Kick" }, # the start of Part 3 immediately requires WC AND TCK
         # it is possible to replace the TCK with a "triple jump" (CL, LS vault, CL again) but you need to carry
@@ -1495,7 +1495,12 @@ connections_data = [
         # wall slide *almost* works here, but unless you get a really fast slide Yanlao will just shoot you off
         # WC AND AD are required yet again when the very end of Part 4 puts a vertical laser between green walls
     ] }, # surprisingly, logic level makes no difference here
+    { "from": "BR - Finished Gauntlet", "to": "BR - After Gauntlet", "requires": [] }, # simply walk out
+    # This distinction between Finished and After is important because in ER,
+    # you can reach After Gauntlet without doing the Gauntlet first.
+    { "from": "BR - After Gauntlet", "to": "BR - Root Node", "requires": [] }, # shortcut door, matters in ER
     { "from": "BR - After Gauntlet", "to": "BR - Inside Vault", "requires": [
+        { "region": "BR - Finished Gauntlet" }, # due to ER, we need to explicitly require actually finishing the gauntlet
         # Locks 1 and 2 are on the critical path itemless
         # Lock 3 requires CL OR AD (use the rising platform for AD)
         # Lock 4 requires clearing the shielded enemies; there are many options here but
