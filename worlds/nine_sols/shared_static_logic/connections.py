@@ -2713,7 +2713,7 @@ connections_data = [
     },
     {
         "from": "ED (Living Area) - Root Node & Lower Elevator", "to": "ED (Living Area) - East Building Rooftops",
-        "ls_requires": [{ "item": "Ledge Grab" }] # wal; slide even longer
+        "ls_requires": [{ "item": "Ledge Grab" }] # wall slide even longer
     },
     { "from": "ED (Living Area) - East Building Interior Part 1", "to": "ED (Living Area) - East Building Interior Part 2", "requires": [
         { "item": "Cloud Leap" }
