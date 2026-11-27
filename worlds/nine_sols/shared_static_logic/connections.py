@@ -2740,6 +2740,7 @@ connections_data = [
         { "item": "Cloud Leap" }, { "item": "Ledge Grab" }
     ] },
     { "from": "ED (Living Area) - Opera Theater Roofs", "to": "ED (Living Area) - East Building Rooftops", "requires": [] }, # fall
+    { "from": "ED (Living Area) - East Building Rooftops", "to": "ED (Living Area) - East Building Interior Part 1", "requires": [] }, # fall
     {
         "from": "ED (Living Area) - East Building Rooftops", "to": "ED (Living Area) - East Building Rooftops Chest",
         "requires": [{ "item": "Mystic Nymph: Scout Mode" }], # to lower rope
