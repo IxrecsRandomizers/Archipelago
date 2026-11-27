@@ -2352,11 +2352,19 @@ connections_data = [
     # this is where the LS shenanigans end for our ST logic, because on UCP there's no way to set up another LS without CL
     # (...except carrying qi all the way up here from outside ST lol)
     { "from": "Sky Tower - Upper Checkpoint Platform", "to": "Sky Tower - Lower Checkpoint Platform", "requires": [] }, # fall
-    { "from": "Sky Tower - Upper Checkpoint Platform", "to": "Sky Tower - Stowaway", "requires": [
-        { "item": "Cloud Leap" },
-        { "item": "Wall Climb" },
-        { "anyOf": [{ "item": "Air Dash" }, { "item": "Ledge Grab" }] }
-    ] },
+    {
+        "from": "Sky Tower - Upper Checkpoint Platform", "to": "Sky Tower - Stowaway",
+        "requires": [
+            { "item": "Cloud Leap" }, # several of the little toggling platforms are spaced for CL
+            { "item": "Wall Climb" }, # the green wall before the final ropes is mandatory
+            # What's less clear-cut is how to get past the long red rope in the middle of the toggling platforms
+            { "anyOf": [
+                { "item": "Air Dash" }, # the intended solution is of course dashing through it
+                { "item": "Ledge Grab" } # you can also fall below the rope, Cloud Leap around the other side of it, and grab onto the next platform
+                # apparently this is possible with CL only, but I need CL + LG to make it feasible
+            ] }
+        ]
+    },
     { "from": "Sky Tower - Stowaway", "to": "Sky Tower - Upper Checkpoint Platform", "requires": [] }, # fall
     {
         "from": "Sky Tower - Stowaway", "to": "Sky Tower - Upper Exit & Root Node",
